@@ -1,13 +1,128 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  font-size: 62.5%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --font-family: "Fira Sans", serif;
+}
+
+body {
+  background-color: hsl(175, 30%, 92%);
+}
+h1 {
+  font-family: var(--font-family);
+  font-size: 1.4rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+h2 {
+  font-family: var(--font-family);
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+img {
+  display: block;
+  width: 16rem;
+  height: 16rem;
+  object-fit: cover;
+}
+
+section {
+  max-width: 600px;
+  margin-inline: auto;
+  margin-block-start: 4rem;
+  padding: 2rem;
+  background-color: hsl(177, 31%, 85%);
+}
+
+section > div {
+  padding: 2rem;
+  background-color: white;
+}
+
+.hr_container-1 {
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr;
+  align-items: center;
+}
+
+.hr_container-1 > p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0.7;
+  font-family: var(--font-family);
+  padding-inline-start: 3rem;
+}
+
+.hr_container-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid lightblue; */
+  padding-block: 2rem;
+}
+
+.hr_container-2 > div {
+  padding-inline: 1rem;
+}
+
+.hr_container-2 > div > button {
+  padding: 0.8rem;
+  margin-inline-end: 0.3rem;
+  border-radius: 50%;
+  border-style: unset;
+}
+
+.active_profile {
+  background-color: tomato;
+}
+
+.hr_container-3 {
+  border-top: 3px solid lightcoral;
+  padding-block: 2rem;
+}
+
+.hr_container-3 > button {
+  border-style: unset;
+  background-color: unset;
+  padding-inline: 1rem;
+  opacity: 0.8;
+}
+
+.hr_container-3 > button:hover {
+  color: tomato;
+}
+
+@media (max-width: 550px) {
+  img {
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+  }
+  section {
+    margin-block-start: unset;
+  }
+  .hr_container-1 {
+    border: 1px solid lightblue;
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 0.7fr;
+    align-items: center;
+  }
+
+  .hr_container-1 > p {
+    padding-inline-start: unset;
+    text-align: center;
+  }
 }
