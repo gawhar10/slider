@@ -109,6 +109,9 @@ section > div {
     height: 24rem;
     object-fit: cover;
   }
+  body {
+    background-color: hsl(177, 31%, 85%);
+  }
   section {
     margin-block-start: unset;
   }
